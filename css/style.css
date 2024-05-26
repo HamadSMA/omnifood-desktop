@@ -13,8 +13,8 @@ Bold: 700
 
 - line heights
 Default: 1
-1.05
-1.6
+Small: 1.05
+Paragraph default: 1.6
 
 --- 02 COLORS
 
@@ -41,7 +41,7 @@ Spacing system (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 
 +=+=+=+=+=+=+=+=+=
-Free images: https://unsplash.com/ 
+Free images: https://unsplash.com/ -- https://www.pexels.com/ -- https://pixabay.com/
 Free Avatars: https://www.uifaces.co/
 +=+=+=+=+=+=+=+=+=
 
@@ -69,6 +69,27 @@ body {
 /*****************************/
 /* GENERAL REUSABLE COMPONENTS */
 /*****************************/
+.container {
+  /* this size is a standard, as well as 1140px */
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 9.6rem;
+}
+
+.grid--2-cols {
+  /* same as writing 1fr 1fr */
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .heading-primary {
   font-size: 5.2rem;
   font-weight: 700;
@@ -86,6 +107,7 @@ body {
   display: inline-block;
   padding: 1.6rem 3.2rem;
   border-radius: 9px;
+
   /* Put trnsition  on original state */
   transition: all 0.3s;
 }
@@ -154,7 +176,7 @@ body {
   display: inline-block;
   text-decoration: none;
   color: #333;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 1.8rem;
   transition: all 0.3s;
 }
@@ -237,4 +259,12 @@ body {
 .delivered-text span {
   color: #cf711f;
   font-weight: 700;
+}
+
+/*****************************/
+/* HOW IT WORKS SECTION */
+/*****************************/
+.section-how {
+  padding: 9.6rem 0;
+  background-color: orangered;
 }
